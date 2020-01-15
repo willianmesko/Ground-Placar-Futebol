@@ -13,7 +13,7 @@ class PlacarCampeonatosController {
     );
 
     const placarTime = placarTodosCampeonatos
-      .filter(time => (time.idEquipeMandante == timeId ? true : false))
+      .filter(time => (time.idEquipeMandante == timeId || time.idEquipeVisitante == timeId ? true : false))
       .map(time => ({
         data: new Date(time.dataDaPartidaIso).toISOString().substring(0, 10),
         fase: time.fase,
@@ -44,7 +44,6 @@ class PlacarCampeonatosController {
     const equipes = await GroundApi.equipes();
 
     const placarTime = placarCampeonato.data.data
-      .filter(time => (time.idEquipeMandante === 1083 ? true : false))
       .map(time => ({
         data: new Date(time.dataDaPartidaIso).toISOString().substring(0, 10),
         fase: time.fase,
