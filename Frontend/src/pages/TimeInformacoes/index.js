@@ -27,7 +27,7 @@ export default function TimeInformacoes() {
       {!loading ? <TimeInfoBox time={timeInfo} /> : <LoadingBoxTime />}
 
       {!loading ? (
-        placarTime.map(placar => <PlacarBox time={placar} />)
+        placarTime.map(placar => <PlacarBox key={placar.id} time={placar} />)
       ) : (
         <LoadingBoxPlacar />
       )}
