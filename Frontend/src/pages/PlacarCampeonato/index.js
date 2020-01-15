@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import PlacarBox from "../../components/PlacarBox";
 import LoadingBoxPlacar from "../../components/loadingBox/placarBox";
-
+import Button from '@material-ui/core/Button';
 import { CampeonatoInfo } from "./styles";
 import api from "../../services/api";
 
 export default function PlacarCampeonato() {
   const [placarCampeonato, setPlacarCampeonato] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [visible, setVisible] = useState(3);
 
   const { campeonatoId } = useParams();
 
@@ -48,10 +49,18 @@ export default function PlacarCampeonato() {
       )}
 
       {!loading ? (
-        placarCampeonato.map(placar => <PlacarBox time={placar} />)
+        placarCampeonato.slice(0, visible).map(placar => <PlacarBox time={placar} />)
       ) : (
         <LoadingBoxPlacar />
       )}
+
+      {visible < placarCampeonato.length && 
+        <div style={{display: "flex", justifyContent:"center"}}>
+          <Button onClick={() => setVisible(visible + 3)} variant="contained" color="primary" >
+             Carregar mais...
+          </Button>
+        </div>
+      }
     </>
   );
 }
