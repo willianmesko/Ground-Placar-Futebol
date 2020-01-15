@@ -7,10 +7,11 @@ export default function Header() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <AppBar
+   
+      <AppBar 
         position="static"
-        style={{ backgroundColor: "#1E90FF", height: "85px" }}
+        className={classes.root}
+        style={{backgroundColor: "#1E90FF"}}
       >
         <Link to="/">
           <Logo>
@@ -21,6 +22,6 @@ export default function Header() {
           </Logo>
         </Link>
       </AppBar>
-    </div>
+   
   );
 }
