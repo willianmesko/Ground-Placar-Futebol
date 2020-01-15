@@ -12,7 +12,8 @@ export default function PlacarBox({ time }) {
   const {
     urlLogo: logoTimeCasa,
     sigla: siglaTimeCasa,
-    nome: nomeTimeCasa
+    nome: nomeTimeCasa,
+    id: idTimeCasa
   } = time.timeCasaInfo[0];
   const {
     urlLogo: logoTimeRival,
@@ -31,24 +32,27 @@ export default function PlacarBox({ time }) {
         <h5 className={classes.fase}>({fase})</h5>
         <CardContent className={classes.cardContent}>
           <PlacarInfo>
-            <img src={logoTimeCasa} alt={nomeTimeCasa} />
-            <span>{siglaTimeCasa}</span>
+            <Link to={(idTimeCasa === 1083  && idTimeRival !== 1083) 
+              ? `/` : `/timeinfo/${idTimeRival}`}>
+              <img src={(idTimeCasa === 1083) ? logoTimeCasa : logoTimeRival} alt={(idTimeCasa === 1083) ? nomeTimeCasa : nomeTimeRival} />
+            </Link>
+            <span>{(idTimeCasa === 1083) ? siglaTimeCasa : siglaTimeRival}</span>
           </PlacarInfo>
 
           <div>
             <p
               className={classes.placar}
-            >{`${golsTimeCasa} x ${golsTimeRival}`}</p>
+            >{`${(idTimeCasa === 1083) ? golsTimeCasa : golsTimeRival} x ${(idTimeCasa === 1083) ? golsTimeRival : golsTimeCasa}`}</p>
             <h6 className={classes.fase}>
               {estadioNome} - {moment(data, "YYYY-MM-DD").format("DD/MM")}
             </h6>
           </div>
 
           <PlacarInfo>
-            <Link to={`/timeinfo/${idTimeRival}`}>
-              <img src={logoTimeRival} alt={nomeTimeRival} />
+            <Link to={`/timeinfo/${(idTimeCasa === 1083) ? idTimeRival : idTimeCasa}`}>
+              <img src={(idTimeCasa === 1083) ? logoTimeRival : logoTimeCasa} alt={nomeTimeRival} />
             </Link>
-            <span>{siglaTimeRival}</span>
+            <span>{(idTimeCasa === 1083) ? siglaTimeRival : siglaTimeCasa}</span>
           </PlacarInfo>
         </CardContent>
       </Card>
