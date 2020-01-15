@@ -5,9 +5,11 @@ export const useStyles = makeStyles(theme => ({
     display: "flex",
     justifyContent: "center",
     height: "200px",
-
     backgroundColor: "#363636",
-    opacity: 0.8
+    opacity: 0.8,
+    '@media (min-width: 320px) and (max-width: 414px)': {
+      height: "130px"
+    }
   },
   root: {
     width: 500,
