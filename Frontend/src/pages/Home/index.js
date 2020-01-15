@@ -22,7 +22,7 @@ export default function Home() {
       <Campeonatos />
 
       {!loading ? (
-        placar.slice(0, visible).map(placar => <PlacarBox time={placar} />)
+        placar.slice(0, visible).map(placar => <PlacarBox key={placar.id} time={placar} />)
       ) : (
         <LoadingBoxPlacar />
       )}
