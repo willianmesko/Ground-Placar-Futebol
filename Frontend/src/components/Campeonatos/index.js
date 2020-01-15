@@ -21,7 +21,6 @@ export default function Campeonatos() {
                   <Grid item>
                     <img
                       className={classes.grid}
-                      style={{ width: "120px", height: "120px" }}
                       src={
                         "https://s3-sa-east-1.amazonaws.com/logos.footstast.net/campeonatos/copa-do-brasil.png"
                       }
@@ -33,7 +32,6 @@ export default function Campeonatos() {
                   <Grid item>
                     <img
                       className={classes.grid}
-                      style={{ width: "120px", height: "120px" }}
                       src={
                         "https://s3-sa-east-1.amazonaws.com/logos.footstast.net/campeonatos/brasileirao-serie-a.png"
                       }
