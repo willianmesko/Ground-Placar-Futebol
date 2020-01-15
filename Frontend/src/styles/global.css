@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  font-family: 'Montserrat', sans-serif!important;
+}
+body,
+html {
+  color: white;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url("https://gremio.blob.core.windows.net/imgs-site/background-0a37b258cc17e89bebd4aad811e552cf.jpeg")
+      center center;
+  background-repeat: round;
+}
