@@ -13,7 +13,8 @@ class PlacarTimeController {
     );
     const placarTime = placarTodosCampeonatos
       .filter(time =>
-        time.idEquipeMandante == timeId && time.idEquipeVisitante == 1083
+        (time.idEquipeMandante == timeId && time.idEquipeVisitante == 1083) || 
+        (time.idEquipeVisitante == 1083 && time.idEquipeMandante == timeId)
           ? true
           : false
       )
