@@ -19,6 +19,7 @@ class PlacarTimeController {
           : false
       )
       .map(time => ({
+        id: time.id,
         data: new Date(time.dataDaPartidaIso).toISOString().substring(0, 10),
         fase: time.fase,
         campeonatoId: time.idCampeonato,
