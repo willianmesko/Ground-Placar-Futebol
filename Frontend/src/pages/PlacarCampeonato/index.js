@@ -28,7 +28,6 @@ export default function PlacarCampeonato() {
         <CampeonatoInfo>
           <h1>Resultado Campeonato Brasileiro</h1>
           <img
-            style={{ width: "120px", height: "120px" }}
             src={
               "https://s3-sa-east-1.amazonaws.com/logos.footstast.net/campeonatos/brasileirao-serie-a.png"
             }
@@ -39,7 +38,6 @@ export default function PlacarCampeonato() {
         <CampeonatoInfo>
           <h1>Resultado Copa Brasil</h1>
           <img
-            style={{ width: "120px", height: "120px" }}
             src={
               "https://s3-sa-east-1.amazonaws.com/logos.footstast.net/campeonatos/copa-do-brasil.png"
             }
@@ -49,7 +47,7 @@ export default function PlacarCampeonato() {
       )}
 
       {!loading ? (
-        placarCampeonato.slice(0, visible).map(placar => <PlacarBox time={placar} />)
+        placarCampeonato.slice(0, visible).map(placar => <PlacarBox  key={placar.id} time={placar} />)
       ) : (
         <LoadingBoxPlacar />
       )}
