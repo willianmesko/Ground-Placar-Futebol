@@ -8,7 +8,11 @@ export const useStyles = makeStyles({
     height: "220px",
     borderRadius: "10px",
     color: "#eee",
-    marginBottom: 5
+    marginBottom: 5,
+    '@media (min-width: 320px) and (max-width: 414px) ': {
+      height: "110px"
+    },
+  
   },
   root: {
     width: 500,
