@@ -15,6 +15,7 @@ class PlacarCampeonatosController {
     const placarTime = placarTodosCampeonatos
       .filter(time => (time.idEquipeMandante == timeId || time.idEquipeVisitante == timeId ? true : false))
       .map(time => ({
+        id: time.id,
         data: new Date(time.dataDaPartidaIso).toISOString().substring(0, 10),
         fase: time.fase,
         campeonatoId: time.idCampeonato,
@@ -45,6 +46,7 @@ class PlacarCampeonatosController {
 
     const placarTime = placarCampeonato.data.data
       .map(time => ({
+        id: time.id,
         data: new Date(time.dataDaPartidaIso).toISOString().substring(0, 10),
         fase: time.fase,
         campeonatoId: time.idCampeonato,
