@@ -4,7 +4,6 @@ import { useStyles } from "./styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 
 export default function TimeInfoBox({ time }) {
@@ -20,11 +19,8 @@ export default function TimeInfoBox({ time }) {
         />
         <div className={classes.details}>
           <CardContent className={classes.content}>
-            <Typography variant="h2">{time.nome}</Typography>
-
-            <Typography variant="h4">
-              {time.cidade} / {time.estado}
-            </Typography>
+               <p> {time.nome} </p>
+               <p> {time.cidade} / {time.estado} </p>
           </CardContent>
         </div>
         <CardMedia
