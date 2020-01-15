@@ -5,6 +5,7 @@ import Container from "@material-ui/core/Container";
 import { Skeleton } from "@material-ui/lab";
 import { useStyles } from "./styles";
 
+
 export default function LoadingBoxPlacar() {
   const classes = useStyles();
   return (
