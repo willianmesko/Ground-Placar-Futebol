@@ -65,13 +65,14 @@ export const PlacarInfo = styled.div`
     border-radius: 50%;
   }
   a {
-    display: block;
+    display: inline-block;
     text-decoration: none;
+  }
+  a:hover {
     background-color: #363636;
     opacity: 0.8;
     border-radius: 50%;
   }
-
   div {
     font-size: 20px;
   }
