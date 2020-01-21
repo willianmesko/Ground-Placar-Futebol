@@ -9,6 +9,7 @@ export default function Home() {
   const [placar, setPlacar] = useState([]);
   const [loading, setLoading] = useState(true);
   const [visible, setVisible] = useState(3);
+  
    useEffect(() => {
     async function loadScore() {
       const result = await api.get("placartime/1083");
