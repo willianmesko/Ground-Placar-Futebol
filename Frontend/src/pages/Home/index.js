@@ -3,6 +3,7 @@ import Campeonatos from "../../components/Campeonatos";
 import PlacarBox from "../../components/PlacarBox";
 import Button from '@material-ui/core/Button';
 import api from "../../services/api";
+
 import LoadingBoxPlacar from "../../components/loadingBox/placarBox";
 export default function Home() {
   const [placar, setPlacar] = useState([]);
