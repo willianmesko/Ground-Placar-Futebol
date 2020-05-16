@@ -4,7 +4,7 @@
 2 - Inicar a aplicação com "yarn start"  <br>
 3 - Repetir os passos anteriores na pasta frontend  <br>
 
-Link do app https://condescending-poitras-d92d11.netlify.com/ <br>
+Link do app https://soccer-score.netlify.app// <br>
 Link da APi https://ground-api.herokuapp.com/ <br>
  
 /timeplacar/timeId - retorna informação e o placar do time em ambos os campeonatos <br>
